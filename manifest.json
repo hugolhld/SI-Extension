@@ -1,0 +1,23 @@
+{
+    "name": "Eco Surf",
+    "version": "1.0",
+    "description": "Ecolo Extension!",
+    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "img/logo16.png",
+        "32": "img/logo32.png",
+        "48": "img/logo48.png",
+        "128": "img/logo128.png"
+      }
+    },
+    "icons": {
+      "16": "img/logo16.png",
+      "32": "img/logo32.png",
+      "48": "img/logo48.png",
+      "128": "img/logo128.png"
+    },
+    "manifest_version": 2
+  }
+  
