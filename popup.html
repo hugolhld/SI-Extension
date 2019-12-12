@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Eco Surf</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore vero adipisci dolore ullam, voluptates optio eveniet cumque tempore reiciendis dolor accusamus quos, at officia laudantium dolores quibusdam aspernatur animi.</p>
+    <div class="body-container">
+      <header>
+        <div class="header-logo">
+          <img src="img/logo32.png" alt="">
+        </div>
+        <div class="header-config">
+          <img src="img/settings-gears.png" alt="">
+        </div>
+      </header>
+      <main>
+        <div class="main-container">
+          <div class="main-content">
+            <div class="circle-element">
+              <div class="circle fill">
+                <span class="circle-score">70</span>
+                <span class="circle-url">google.fr</span>
+              </div>
+            </div>
+            <div class="content-description">
+              <p>
+                Ce site est responsable et impliqué dans la dépréciation 
+                de son empreinte écologique
+              </p>
+            </div>
+            <button class="content-button">
+              En savoir plus
+            </button>
+          </div>
+          <div class="main-content">
+            <div class="content-result">
+              <span class="content-weight">3.8</span>
+              <span class="content-weight-description">kg de c02</span>
+            </div>
+            <div class="content-description">
+              <p>
+                Soit l'équivalent de 7.8km en voiture
+              </p>
+            </div>
+            <select name="days" id="days-select">
+              <option value="today">Aujourd'hui</option>
+              <option value="yesterday">Hier</option>
+              <option value="last-week">Semaine dernière</option>
+              <option value="last-months">Mois dernier</option>
+            </select>
+            <button class="content-button">
+              Rapports complet
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>  
   </body>
 </html>
