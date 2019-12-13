@@ -6,12 +6,12 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .body-container{
     width: 400px;
-    height: 250px;
-    padding: 20px;
+    padding: 25px;
     color: #707070;
 }
 
@@ -22,12 +22,25 @@ header{
 }
 
 .header-logo{
-    margin-right: 40%;
+    width: 150px;
+    margin-right: 25%;
+}
+
+.header-logo img{
+    width: 100%;
+}
+
+.header-config{
+    width: 20px;
+}
+
+.header-config img{
+    width: 100%;
 }
 
 .main-container{
     width: 100%;
-    height: -webkit-fill-available;
+    margin-top: 20px;
     display: flex;
 }
 
@@ -80,13 +93,13 @@ header{
 
 .content-button{
     margin: 0 auto;
-    width: 60%;
-    height: 15%;
+    width: 125px;
+    height: 30px;
     background: #B0DD26;
     border-radius: 12px;
     box-sizing: none;
     box-shadow: none;
-    color: #fff ;
+    color: #fff;
     border: none;
     outline: none;
 }
@@ -112,25 +125,153 @@ header{
 }   
 
 .select{
+    margin: 10px auto;
     width: 80%;
     background: #34AFE4;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
+    position: relative;
+    display: flex;
+    height: auto;
+    line-height: 2;
+    overflow: hidden;
 }
 
 .select img{
     width: 10px;
 }
 
-select{
+/* select{
     width: 90%;
     -webkit-appearance: none;
     outline: none;
     background: none;
     border: none;
-}
+    position: relative;
+} */
 
 select::after{
-    background-image: url(img/arrow.svg);
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid rgba(0,0,0,.5);
+    transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    z-index: 9;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #34AFE4;
+    background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34AFE4;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #B0DD26;
+  }
+  
+/* Circle */
+
+  .circle-wrap {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  background: #e6e2e7;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .circle .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #B0DD26;
+}
+
+.circle-wrap .circle .mask.full,
+.circle-wrap .circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(126deg);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
+
+.circle-wrap .inside-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inside-circle span{
+    display: block;
+}
+
+.inside-circle span:nth-child(2){
+    font-size: .8em;
 }
