@@ -9,7 +9,7 @@
     <div class="body-container">
       <header>
         <div class="header-logo">
-          <img src="img/logo32.png" alt="">
+          <img src="img/ecosurf.png" alt="">
         </div>
         <div class="header-config">
           <img src="img/settings-gears.png" alt="">
@@ -18,10 +18,15 @@
       <main>
         <div class="main-container">
           <div class="main-content main-left">
-            <div class="circle-element">
-              <div class="circle-fill">
-                <span class="circle-score">70</span>
-                <span class="circle-url">google.fr</span>
+            <div class="circle-wrap">
+              <div class="circle">
+                <div class="mask full">
+                  <div class="fill"></div>
+                </div>
+                <div class="mask half">
+                  <div class="fill"></div>
+                </div>
+                <div class="inside-circle"><span>70%</span><span>google.fr</span></div>
               </div>
             </div>
             <div class="content-description">
@@ -51,7 +56,6 @@
                 <option value="last-week">Semaine dernière</option>
                 <option value="last-months">Mois dernier</option>
               </select>
-              <img src="img/arrow.svg" alt="">
             </div>
             <button class="content-button">
               Rapports complet
@@ -59,6 +63,7 @@
           </div>
         </div>
       </main>
+      <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
     </div>  
   </body>
 </html>
