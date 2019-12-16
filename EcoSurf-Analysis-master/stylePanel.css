@@ -1,0 +1,174 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: #254F6E;
+    margin : 0;
+    padding : 0;
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 15%;
+
+}
+
+.btn-design{
+background:#00a9de;
+box-shadow: 0 1px #444444;  
+padding: 8px 20px;
+color: #ffffff;
+display: inline-block;
+font: normal 18px/1 "Open Sans", sans-serif;
+height:35px;
+text-decoration: none;
+text-align: center; /* hauteur du parent */
+}
+
+.action_button{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+.eco_print{
+    background-color: #ffffff;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    box-shadow: 10px 10px 55px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=55);
+    border-radius: 5px;
+}
+
+.rank{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45%;
+
+}
+.title_print{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    font: normal 12px/1 "Open Sans", sans-serif;
+    align-items: flex-start;
+}
+
+.title_print>h3{
+    margin-top: 5px;
+    font-size: 14px;
+} 
+
+.btn-design_practice{
+    background:#00a9de;
+    box-shadow: 0 1px #444444;  
+    padding: 8px 20px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal 18px/1 "Open Sans", sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    margin-top: 50px;
+    }
+
+.container_eco_print{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#ecoIndexView{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+input.switch {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	width: 40px;
+	height: 20px;
+	background-color: #fff;
+	border: 1px solid #D9DADC;
+	border-radius: 50px;
+	-webkit-box-shadow: inset -20px 0px 0px 0px #D9DADC;
+	box-shadow: inset -20px 0px 0px 0px #D9DADC;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+}
+
+input.switch:checked {
+	-webkit-box-shadow: inset 20px 0px 0px 1px #4ed164;
+	box-shadow: inset 20px 0px 0px 1px #4ed164;
+}
+
+input.switch::-ms-check {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	/* IE 8 */
+	filter: alpha(opacity=0);
+	/* IE 5-7 */
+	opacity: 0;
+}
+.best_practice{
+    color: #ffffff;
+    font: normal 18px/1 "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+#bestPracticesView{
+    color: #ffffff;
+}
+
+
+.table_practice>tbody>tr>td{
+    border-color: #254F6E;
+    font: normal 12px/1 "Open Sans", sans-serif;
+    
+}
+
+.table_practice>tbody>tr>td>a{
+    color: #ffffff;
+}
+
+input[type=checkbox] {
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#helpButton{
+    height: 35px;
+    height: 35px;
+    /* margin: auto; */
+    display: flex;
+    width: 45px;
+}
+
+.bold_police{
+    font: normal 12px/1 "Open Sans", sans-serif;
+    font-weight: 500;
+}
+
+.table-condensed>tbody>tr>.result_bold_police{
+    font: normal 15px/1 "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #00a9de;
+}
+
+.gradeCircle{
+    font: normal 20px/1 "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #00a9de;
+}
+

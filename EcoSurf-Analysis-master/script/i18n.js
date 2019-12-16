@@ -21,5 +21,7 @@
 for ( const elem of document.querySelectorAll('[data-i18n]') ) {
     let text = chrome.i18n.getMessage(elem.getAttribute('data-i18n'));
     if ( !text ) { continue; }
-    elem.appendChild( document.createTextNode(text));
+    var t = elem.appendChild( document.createElement("p"));
+    var h = elem.appendChild( document.createTextNode(text));
+    t.appendChild(h);
 }
