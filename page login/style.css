@@ -1,0 +1,145 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+.main-login{
+    width: 1050px;
+    margin: 30px;
+    border-radius: 25px;
+    background: #CDECF9;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-connection img{
+    width: 35px;
+    opacity: 50%;
+}
+
+.login-logo{
+    width: 600px;
+}
+
+.login-logo img{
+    width: 100%;
+}
+
+.login-social{
+    width: 550px;
+    margin: 30px;
+    padding: 30px 0;
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.btn-social{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-connection{
+    width: 90%;
+    margin: 10px;
+    border: .5px solid grey ;
+    border-radius: 5px;
+    background: none;
+    padding: 10px;
+    font-weight: 800;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-connection img{
+    width: 35px;
+    margin-right: 50px;
+}
+
+.facebook .btn-connection{
+    color: #fff;
+    background: #3b5998 ;
+}
+
+.login-connection{
+    width: 600px;
+    margin: 30px;
+    border-radius: 25px;
+    background: #fff;
+}
+
+.login-connection h2{
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.main-connection{
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.login-mail{
+    width: 80%;
+    margin: 20px;
+    border-bottom: 2px solid #CDECF9;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+}
+
+.login-password{
+    width: 80%;
+    margin: 20px;
+    border-bottom: 2px solid #CDECF9;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+}
+
+.main-connection input{
+    width: 100%;
+    outline: none;
+    border: none;
+    margin-left: 15px ;
+    font-size: 13px;
+    opacity: 50%;
+}
+
+.ul-footer{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.li-footer{
+    margin: 20px;
+    list-style: none;
+}
+
+.li-footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.li-footer::after{
+    content: ' - ';
+    margin-left: 30px;
+}
+
+.li-footer:nth-child(3)::after{
+    content: ' ';
+}
