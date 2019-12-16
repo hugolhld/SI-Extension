@@ -15,8 +15,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
+
 function initUI() {
   document.getElementById('launchAnalyse').addEventListener('click', (e) => launchAnalyse());
+  window.onload = (e) => launchAnalyse();
   document.getElementById('saveAnalyse').addEventListener('click', (e) => storeAnalysisInHistory());
   document.getElementById('viewHistory').addEventListener('click', (e) => viewHistory());
   document.getElementById('helpButton').addEventListener('click', (e) => viewHelp());
@@ -95,15 +98,15 @@ function setUnsupportedRuleAnalyse(ruleId) {
 
 
 function refreshUI() {
+  let dataCircle = document.querySelector(".ldBar");
   const measures = measuresAcquisition.getMeasures();
   document.getElementById("ecoIndexView").hidden = false;
   document.getElementById("requestNumber").innerHTML = measures.nbRequest;
-
   if (measures.responsesSizeUncompress != 0) document.getElementById("responsesSize").innerHTML = Math.round(measures.responsesSize / 1000) + " (" + Math.round(measures.responsesSizeUncompress / 1000) + ")";
   else document.getElementById("responsesSize").innerHTML = Math.round(measures.responsesSize / 1000);
-
   document.getElementById("domSize").innerHTML = measures.domSize;
-  document.getElementById("ecoIndex").innerHTML = measures.ecoIndex;
+  document.getElementById("ecoIndex").innerHTML ='<p class="gradeCircle">' + measures.ecoIndex + '</p>';
+  dataCircle.setAttribute("data-value", measures.ecoIndex);
   document.getElementById("grade").innerHTML = '<span class="grade ' + measures.grade + '">' + measures.grade + '</span>';
   document.getElementById("waterConsumption").innerHTML = measures.waterConsumption;
   document.getElementById("greenhouseGasesEmission").innerHTML = measures.greenhouseGasesEmission;
@@ -113,6 +116,8 @@ function refreshUI() {
   }
   else document.getElementById("bestPracticesView").hidden = true;
 }
+
+window.onload = (e) => refreshUI(); 
 
 function showEcoRuleOnUI(rule) {
   if (rule !== undefined) {
