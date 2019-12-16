@@ -58,7 +58,7 @@ nav ul
 
 .leftSide
 {
-    height:70%;
+    height:80%;
     width: 25%;
     background-color: #B0DD26;
     border-radius: 25px;
@@ -67,7 +67,7 @@ nav ul
 
 .rightSide
 {
-    height:70%;
+    height:80%;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -75,9 +75,9 @@ nav ul
     justify-content: space-around;
 }
 
-.hebdo
+.top
 {
-    height:20%;
+    height:25%;
     width: 100%;
     border-radius: 25px;
     display: flex;
@@ -86,36 +86,51 @@ nav ul
     justify-content: space-between;
 }
 
-.hebdo2
+.top2
 {
     height:100%;
     width: 45%;
     background-color: #B0DD26;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.hebdo3
+.top3
 {
     height:100%;
     width: 45%;
     background-color: #B0DD26;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.positif
+.bars
 {
-    height:20%;
+    height:25%;
     width: 100%;
     background-color: #B0DD26;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.negatif
+.tips
 {
-    height:20%;
+    height:25%;
     width: 100%;
-    background-color: #B0DD26;
     border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo
@@ -128,10 +143,177 @@ nav ul
 
 .co2
 {
-    height: 250px;
-    width: 80%;
+
+    height: 300px;
+    width: 85%;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-left: 8%;
+    margin-top: 160px;
+}
+
+.tips2
+{
+    height:100%;
+    width: 45%;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #B0DD26;
+}
+
+.tips3
+{
+    height:100%;
+    width: 45%;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #B0DD26;
+}
+
+.box
+{
+    height: 170px;
+    width: 60%;
     background-color: #CDECF9;
     border-radius: 25px;
-    margin-left: 10%;
-    margin-top: 30px;;
+    margin-left: 20%;
+    margin-top: -440px;
+}
+
+.box2
+{
+    height: 250px;
+    width: 85%;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-left: 8%;
+    margin-top: 300px;
+}
+
+.lines1
+{
+    height: 18%;
+    width: 90%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lines2
+{
+    height: 18%;
+    width: 90%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lines3
+{
+    height: 18%;
+    width:90%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line1
+{
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.rect1
+{
+    height: 100%;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.line2
+{
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.rect2
+{
+    height: 100%;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.line3
+{
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.rect3
+{
+    height: 100%;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.amount1
+{
+    height: 100%;
+    width: 15%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.amount2
+{
+    height: 100%;
+    width: 15%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.amount3
+{
+    height: 100%;
+    width: 15%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.bar1
+{
+    height: 100%;
+    width: 70%;
+    background-color: #CDECF9;
+    border-radius: 25px;
+}
+
+.bar2
+{
+    height: 100%;
+    width: 70%;
+    background-color: #CDECF9;
+    border-radius: 25px;
+}
+
+.bar3
+{
+    height: 100%;
+    width: 70%;
+    background-color: #CDECF9;
+    border-radius: 25px;
 }
