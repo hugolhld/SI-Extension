@@ -1,0 +1,161 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container
+{
+    width: 85vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 30px;
+    background: #C4E566;
+    padding: 30px;
+}
+
+
+/* Table Header */
+
+.top-container
+{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title
+{
+    background: white; 
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+h1
+{
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ICONS */
+
+.icons
+{
+    align-self: flex-end;
+    margin-right: 45px;
+}
+
+.icon
+{
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
+    fill: white;
+}    
+
+.small-icon
+{
+    width: 20px;
+    height: auto;
+}
+
+
+/* Table */
+
+.table-container
+{
+    background:white;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.table
+{
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    font-size: 15px;
+}
+
+th
+{
+    border-bottom: #ccc 2px solid ; 
+}
+
+td
+{
+    text-align: center;
+    padding: 10px 0;
+}
+
+td a 
+{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* GRADE COLOR*/
+
+.note 
+{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    text-align:center;
+    border-radius:50%;
+    background-color:#f00;          
+    font-size: 12px;
+    line-height: 22px;
+}
+
+
+.note.A 
+{
+    background-color:#349A47;
+    color:#fff;
+}
+
+.note.B 
+{
+    background-color:#51B84B;
+    color:#fff;
+}
+
+.note.C 
+{
+    background-color:#CADB2A
+}
+
+.note.D 
+{
+    background-color:#F6EB15
+}
+
+.note.E 
+{
+    background-color:#FECD06
+}
+
+.note.F 
+{
+    background-color:#F99839;
+    color:#fff;
+}
+
+.note.G 
+{
+    background-color:#ED2124;
+    color:#fff;
+}
+
+/* HELP */
+
+
