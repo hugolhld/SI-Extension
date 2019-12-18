@@ -70,8 +70,8 @@ function appendLine(result_date, url, nbRequest, responsesSize, domSize, greenho
 	html = html + "<td>" + ecoIndex + "</td>";
 	html = html + "<td>" + '<span class="note ' + grade + '">' + grade + '</span>' + "</td>";
 
-	html = html + "</td> <a href=\"#\" id=\"delete_button" + line_number
-		+ "\" class=\"btn btn-primary btn-sm\"> <span class=\"glyphicon glyphicon-trash\"></span> "
+	html = html + "<td > <a href=\"#\" id=\"delete_button" + line_number
+		+ "\" class=\"a-delete\"> <img src=\"icons/delete.svg\" alt=\"delete-icon\" class=\"icon small-icon\"> "
 		+ chrome.i18n.getMessage("deleteButton") + "</a></td>";
 
 	var newTR = document.createElement("tr");
@@ -132,7 +132,7 @@ function export_data() {
 	var a = document.createElement('a');
 	a.href = 'data:attachment/csv,' + encodeURIComponent(to_export);
 	a.target = 'download';
-	a.download = 'ecoindex.csv';
+	a.download = 'ecoSurf-historique.csv';
 
 	// use iframe "download" to put the link (in order not to be redirect in the parent frame)
 	var myf = document.getElementById("download");
