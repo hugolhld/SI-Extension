@@ -18,18 +18,20 @@ body{
 .btn-design{
 background:#00a9de;
 box-shadow: 0 1px #444444;  
-padding: 8px 20px;
+padding: 25px 20px;
 color: #ffffff;
-display: inline-block;
+display: flex;
+align-items: center;
 font: normal 18px/1 "Open Sans", sans-serif;
 height:35px;
 text-decoration: none;
 text-align: center; /* hauteur du parent */
+border-radius: 12px;
 }
 
 .action_button{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-bottom: 50px;
 }
 
@@ -38,10 +40,10 @@ text-align: center; /* hauteur du parent */
     height: 300px;
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 100%;
     box-shadow: 10px 10px 55px 0px #656565;
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=55);
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .rank{
@@ -63,6 +65,7 @@ text-align: center; /* hauteur du parent */
 .title_print>h3{
     margin-top: 5px;
     font-size: 14px;
+    margin-left: 5px;
 } 
 
 .btn-design_practice{
@@ -126,10 +129,6 @@ input.switch::-ms-check {
     align-items: center;
 }
 
-#bestPracticesView{
-    color: #ffffff;
-}
-
 
 .table_practice>tbody>tr>td{
     border-color: #254F6E;
@@ -138,7 +137,7 @@ input.switch::-ms-check {
 }
 
 .table_practice>tbody>tr>td>a{
-    color: #ffffff;
+    color: #1C6EA4;
 }
 
 input[type=checkbox] {
@@ -172,3 +171,91 @@ input[type=checkbox] {
     color: #00a9de;
 }
 
+table.table_practice {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+}
+
+table.table_practice td, table.table_practice th {
+  border: 0px solid #AAAAAA;
+  padding: 10px 0px;
+}
+table.table_practice tbody td {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1C6EA4;
+  padding: 20px;
+  text-align: center;
+}
+table.table_practice thead {
+  background: #1C6EA4;
+}
+table.table_practice thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+}
+table.table_practice tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #FFFFFF;
+  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);
+  border-top: 2px solid #444444;
+}
+table.table_practice tfoot td {
+  font-size: 14px;
+}
+table.table_practice tfoot .links {
+  text-align: right;
+}
+table.table_practice tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+h4{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#bestPracticesView {
+    -webkit-animation: bestPracticesView 1s ease-in-out both;
+            animation: bestPracticesView 1s ease-in-out both;
+            color: #ffffff;
+}
+@-webkit-keyframes bestPracticesView {
+    0% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes bestPracticesView {
+    0% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
