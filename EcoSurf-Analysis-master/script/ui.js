@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  didierfred@gmail.com 
+ *  Copyright (C) 2019  didierfred@gmail.com
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published
@@ -14,16 +14,24 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
-
+let circleDrawn = false;
 function initUI() {
-  document.getElementById('launchAnalyse').addEventListener('click', (e) => launchAnalyse());
-  window.onload = (e) => launchAnalyse();
-  document.getElementById('saveAnalyse').addEventListener('click', (e) => storeAnalysisInHistory());
-  document.getElementById('viewHistory').addEventListener('click', (e) => viewHistory());
-  document.getElementById('helpButton').addEventListener('click', (e) => viewHelp());
-  document.getElementById('analyseBestPracticesCheckBox').addEventListener('click', (e) => setAnalyseBestPractices());
+  document
+    .getElementById("launchAnalyse")
+    .addEventListener("click", e => launchAnalyse());
+  window.onload = e => launchAnalyse();
+  document
+    .getElementById("saveAnalyse")
+    .addEventListener("click", e => storeAnalysisInHistory());
+  document
+    .getElementById("viewHistory")
+    .addEventListener("click", e => viewHistory());
+  document
+    .getElementById("helpButton")
+    .addEventListener("click", e => viewHelp());
+  document
+    .getElementById("analyseBestPracticesCheckBox")
+    .addEventListener("click", e => setAnalyseBestPractices());
 
   // Set best practices
   rulesManager.getRulesId().forEach(loadHTMLBestPractice);
@@ -32,7 +40,7 @@ function initUI() {
   let links = document.getElementsByClassName("bestPracticeLink");
   for (var i = 0; i < links.length; i++) {
     const id = links.item(i).id;
-    document.getElementById(id).addEventListener('click', (e) => {
+    document.getElementById(id).addEventListener("click", e => {
       //On désactive le comportement du lien
       e.preventDefault();
       switchElementVisibiliy(id + "TextRow");
@@ -43,7 +51,7 @@ function initUI() {
   links = document.getElementsByClassName("detailCommentLink");
   for (var i = 0; i < links.length; i++) {
     const id = links.item(i).id;
-    document.getElementById(id).addEventListener('click', (e) => {
+    document.getElementById(id).addEventListener("click", e => {
       //On désactive le comportement du lien
       e.preventDefault();
       switchElementVisibiliy(id + "TextRow");
@@ -54,21 +62,31 @@ function initUI() {
 function loadHTMLBestPractice(ruleId) {
   let html = "";
   html += "<td>";
-  html += "<a href=\"#\" id=\"" + ruleId + "_Detail\" class=\"bestPracticeLink\">";
+  html += '<a href="#" id="' + ruleId + '_Detail" class="bestPracticeLink">';
   html += chrome.i18n.getMessage("rule_" + ruleId);
   html += "</a>";
   html += "</td>";
-  html += "<td style=\"width:30px\"> <img id=\"" + ruleId + "_status\" src=\"icons/OK.png\"></td>";
-  html += "<td> <span id=\"" + ruleId + "_comment\"> </span> <a href=\"#\" id=\"" + ruleId + "_DetailComment\" class=\"detailCommentLink\" hidden>.....</a> </td>";
+  html +=
+    '<td style="width:30px"> <img id="' +
+    ruleId +
+    '_status" src="icons/OK.png"></td>';
+  html +=
+    '<td> <span id="' +
+    ruleId +
+    '_comment"> </span> <a href="#" id="' +
+    ruleId +
+    '_DetailComment" class="detailCommentLink" hidden>.....</a> </td>';
 
   var newTR = document.createElement("tr");
   newTR.innerHTML = html;
   document.getElementById("bestPracticesTable").appendChild(newTR);
 
-
   html = "";
-  html += "<td colspan=\"3\">";
-  html += "<p class=\"bestPracticeDetail\">" + chrome.i18n.getMessage("rule_" + ruleId + "_DetailDescription"); "</p>";
+  html += '<td colspan="3">';
+  html +=
+    '<p class="bestPracticeDetail">' +
+    chrome.i18n.getMessage("rule_" + ruleId + "_DetailDescription");
+  ("</p>");
   html += "</td>";
 
   newTR = document.createElement("tr");
@@ -78,8 +96,11 @@ function loadHTMLBestPractice(ruleId) {
   document.getElementById("bestPracticesTable").appendChild(newTR);
 
   html = "";
-  html += "<td colspan=\"3\">";
-  html += "<p id=\"" + ruleId + "_DetailCommentText\" class=\"bestPracticeDetailComment\"> </p>";
+  html += '<td colspan="3">';
+  html +=
+    '<p id="' +
+    ruleId +
+    '_DetailCommentText" class="bestPracticeDetailComment"> </p>';
   html += "</td>";
 
   newTR = document.createElement("tr");
@@ -87,65 +108,116 @@ function loadHTMLBestPractice(ruleId) {
   newTR.hidden = true;
   newTR.innerHTML = html;
   document.getElementById("bestPracticesTable").appendChild(newTR);
-
 }
 
 function setUnsupportedRuleAnalyse(ruleId) {
   console.log("ruleId=" + ruleId);
   document.getElementById(ruleId + "_status").src = "";
-  document.getElementById(ruleId + "_comment").innerHTML = chrome.i18n.getMessage("unsupportedRuleAnalyse");
+  document.getElementById(
+    ruleId + "_comment"
+  ).innerHTML = chrome.i18n.getMessage("unsupportedRuleAnalyse");
 }
 
-
 function refreshUI() {
-  let dataCircle = document.querySelector(".ldBar");
+  //let dataCircle = document.querySelector(".ldBar");
   const measures = measuresAcquisition.getMeasures();
   document.getElementById("ecoIndexView").hidden = false;
   document.getElementById("requestNumber").innerHTML = measures.nbRequest;
-  if (measures.responsesSizeUncompress != 0) document.getElementById("responsesSize").innerHTML = Math.round(measures.responsesSize / 1000) + " (" + Math.round(measures.responsesSizeUncompress / 1000) + ")";
-  else document.getElementById("responsesSize").innerHTML = Math.round(measures.responsesSize / 1000);
+  if (measures.responsesSizeUncompress != 0)
+    document.getElementById("responsesSize").innerHTML =
+      Math.round(measures.responsesSize / 1000) +
+      " (" +
+      Math.round(measures.responsesSizeUncompress / 1000) +
+      ")";
+  else
+    document.getElementById("responsesSize").innerHTML = Math.round(
+      measures.responsesSize / 1000
+    );
   document.getElementById("domSize").innerHTML = measures.domSize;
-  document.getElementById("ecoIndex").innerHTML ='<p class="gradeCircle">' + measures.ecoIndex + '</p>';
-  dataCircle.setAttribute("data-value", measures.ecoIndex);
-  document.getElementById("grade").innerHTML = '<span class="grade ' + measures.grade + '">' + measures.grade + '</span>';
-  document.getElementById("waterConsumption").innerHTML = measures.waterConsumption;
-  document.getElementById("greenhouseGasesEmission").innerHTML = measures.greenhouseGasesEmission;
+  document.getElementById("ecoIndex").innerHTML =
+    '<p class="gradeCircle">' + measures.ecoIndex + "</p>";
+
+  let test = measures.ecoIndex;
+  if (!circleDrawn) {
+    progressCircle(test);
+    circleDrawn = true
+  }
+
+  //dataCircle.setAttribute("data-value", measures.ecoIndex);
+  document.getElementById("grade").innerHTML =
+    '<span class="grade ' + measures.grade + '">' + measures.grade + "</span>";
+  document.getElementById("waterConsumption").innerHTML =
+    measures.waterConsumption;
+  document.getElementById("greenhouseGasesEmission").innerHTML =
+    measures.greenhouseGasesEmission;
   if (analyseBestPractices) {
     document.getElementById("bestPracticesView").hidden = false;
     currentRulesChecker.getAllRules().forEach(showEcoRuleOnUI);
-  }
-  else document.getElementById("bestPracticesView").hidden = true;
+  } else document.getElementById("bestPracticesView").hidden = true;
 }
 
-window.onload = (e) => refreshUI(); 
+function progressCircle(test) {
+  var bar = new ProgressBar.Circle(hugolpb, {
+    color: "#aaa",
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 4,
+    trailWidth: 1,
+    easing: "easeInOut",
+    duration: 1400,
+    text: {
+      autoStyleContainer: false
+    },
+    from: { color: "#aaa", width: 1 },
+    to: { color: "#333", width: 4 },
+    // Set default step function for all animate calls
+    step: function(state, circle) {
+      circle.path.setAttribute("stroke", state.color);
+      circle.path.setAttribute("stroke-width", state.width);
+
+      var value = Math.round(circle.value() * 100);
+      if (value === 0) {
+        circle.setText("");
+      } else {
+        circle.setText(value);
+      }
+    }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = "2rem";
+  bar.animate(test / 100); // Number from 0.0 to 1.0
+}
+
+refreshUI();
+// progressCircle(test);
 
 function showEcoRuleOnUI(rule) {
   if (rule !== undefined) {
-    document.getElementById(rule.id + "_status").src = "icons/" + rule.complianceLevel + ".png";
+    document.getElementById(rule.id + "_status").src =
+      "icons/" + rule.complianceLevel + ".png";
     document.getElementById(rule.id + "_comment").innerHTML = rule.comment;
 
     if (rule.detailComment.length > 0) {
       document.getElementById(rule.id + "_DetailComment").hidden = false;
-      document.getElementById(rule.id + "_DetailCommentText").innerHTML = rule.detailComment;
-    }
-    else {
+      document.getElementById(rule.id + "_DetailCommentText").innerHTML =
+        rule.detailComment;
+    } else {
       if (document.getElementById(rule.id + "_DetailComment")) {
         document.getElementById(rule.id + "_DetailComment").hidden = true;
         document.getElementById(rule.id + "_DetailCommentText").innerHTML = "";
-        document.getElementById(rule.id + "_DetailCommentTextRow").hidden = true;
+        document.getElementById(
+          rule.id + "_DetailCommentTextRow"
+        ).hidden = true;
       }
     }
-
   }
 }
 
-
 function viewHistory() {
   if (chrome.tabs) chrome.tabs.query({ currentWindow: true }, loadHistoryTab);
-  // chrome.tabs is not accessible in old chromium version 
+  // chrome.tabs is not accessible in old chromium version
   else window.open("history.html");
 }
-
 
 function loadHistoryTab(tabs) {
   var history_tab;
@@ -162,19 +234,21 @@ function loadHistoryTab(tabs) {
   else chrome.tabs.create({ url: "history.html" });
 }
 
-
 function viewHelp() {
-  window.open("https://github.com/didierfred/GreenIT-Analysis/blob/V2/README.md");
+  window.open(
+    "https://github.com/didierfred/GreenIT-Analysis/blob/V2/README.md"
+  );
 }
 
-
 function setAnalyseBestPractices() {
-  analyseBestPractices = document.getElementById('analyseBestPracticesCheckBox').checked;
-  if (!analyseBestPractices) document.getElementById("bestPracticesView").hidden = true;
+  analyseBestPractices = document.getElementById("analyseBestPracticesCheckBox")
+    .checked;
+  if (!analyseBestPractices)
+    document.getElementById("bestPracticesView").hidden = true;
 }
 
 function switchElementVisibiliy(id) {
-  if (document.getElementById(id).hidden) document.getElementById(id).hidden = false;
+  if (document.getElementById(id).hidden)
+    document.getElementById(id).hidden = false;
   else document.getElementById(id).hidden = true;
-
 }

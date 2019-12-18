@@ -260,3 +260,4 @@ function storeAnalysisInHistory() {
 
   localStorage.setItem("analyse_history", JSON.stringify(analyse_history));
 }
+

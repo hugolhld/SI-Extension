@@ -1,0 +1,4 @@
+Salut, c'est gentil de bie vouloir nous aider :D.
+C'est un extension faut ajouter le dossier non empacté qui s'appelle EcoSurf-Analysis-master, ensuite faut l'ouvrir dans la console sa s'appene GreenIT. ensuite il y a un score index qu'on a galere a pouvoir sortir de la fonction pour le pmettre dans la progress bar.
+Du coup on a plus ou moins reussi a la sortir mais le problème maintenant c'est que la progress bar ce multipile par 3 ou 4 selon les moments, du coup si tu peux nous aider a résoudre ça ça sera super sympa :).
+LEs fichiers principaux utilisé pour ça c'est EcoSurf-Analysis-master > script > ui.js et le fichier HTML c'est GreenPanel.html
