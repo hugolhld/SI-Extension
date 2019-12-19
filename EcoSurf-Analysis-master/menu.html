@@ -18,53 +18,47 @@
       </header>
       <main>
         <div class="main-container">
-          <div class="main-content main-left">
-            <div class="circle-wrap">
-              <div class="circle">
-                <div class="mask full">
-                  <div class="fill"></div>
-                </div>
-                <div class="mask half">
-                  <div class="fill"></div>
-                </div>
-                <div class="inside-circle"><span>70%</span><span>google.fr</span></div>
+          <div class="container">
+            <div class="main-content">
+              <div class="content-result">
+                <span class="content-weight">3.8</span>
+                <span class="content-weight-description">kg de c02</span>
+              </div>
+              <div class="content-description">
+                <p>
+                  Soit l'équivalent de 7.8km en voiture
+                </p>
               </div>
             </div>
-            <div class="content-description">
-              <p>
-                Ce site est responsable et impliqué dans la dépréciation 
-                de son empreinte écologique
-              </p>
+            <div class="main-left"></div>
+            <div class="main-content">
+              <div class="content-result">
+                <span class="content-weight">6.7</span>
+                <span class="content-weight-description">cl d'eau</span>
+              </div>
+              <div class="content-description">
+                <p>
+                  Soit l'équivalent d'une cuillère a soupe
+                </p>
+              </div>
             </div>
-            <button class="content-button">
-              En savoir plus
-            </button>
+          </div> 
+          <div class="select">
+            <select name="days" id="days-select">
+              <option value="today">Aujourd'hui</option>
+              <option value="yesterday">Hier</option>
+              <option value="last-week">Semaine dernière</option>
+              <option value="last-months">Mois dernier</option>
+            </select>
           </div>
-          <div class="main-content">
-            <div class="content-result">
-              <span class="content-weight">3.8</span>
-              <span class="content-weight-description">kg de c02</span>
-            </div>
-            <div class="content-description">
-              <p>
-                Soit l'équivalent de 7.8km en voiture
-              </p>
-            </div>
-            <div class="select">
-              <select name="days" id="days-select">
-                <option value="today">Aujourd'hui</option>
-                <option value="yesterday">Hier</option>
-                <option value="last-week">Semaine dernière</option>
-                <option value="last-months">Mois dernier</option>
-              </select>
-            </div>
-            <button class="content-button">
-              Rapports complet
-            </button>
-          </div>
-        </div>
+          <button class="content-button">
+            Rapports complet
+          </button>
+      </div>
+      <button class="dev-tool">DevTool</button>
       </main>
       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
     </div>  
+    <script src="menu.js"></script>
   </body>
 </html>
