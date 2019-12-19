@@ -81,6 +81,9 @@ class Bars {
 const bars = new Bars(document.querySelector('.bars'))
 
 
+
+function trie() {
+
 let currenturl1 = document.querySelector(".line1");
 let currenturl2 = document.querySelector(".line2");
 let currenturl3 = document.querySelector(".line3");
@@ -90,36 +93,18 @@ let currentGrade3 = document.querySelector(".rect3");
 let analyse_history = localStorage.getItem("analyse_history");
 let analyse_to_store = JSON.parse(analyse_history);
 
-let analyse_to_store[0].stringify(url) = analyse_to_store[0].ecoIndex
-let score1 = analyse_to_store[1].ecoIndex
-let score2 = analyse_to_store[2].ecoIndex
-let score3 = analyse_to_store[3].ecoIndex
-let score4 = analyse_to_store[4].ecoIndex
-let score5 = analyse_to_store[5].ecoIndex
-let score6 = analyse_to_store[6].ecoIndex
-let score7 = analyse_to_store[7].ecoIndex
-let score8 = analyse_to_store[8].ecoIndex
-let score9 = analyse_to_store[9].ecoIndex
-let score10 = analyse_to_store[10].ecoIndex
-let score11 = analyse_to_store[11].ecoIndex
-
-let ordre = [score0, score1, score2, score3, score4, score5, score6, score7, score8, score9, score10, score11] 
-
-
-
-
-console.log(ordre)
 
 console.log(analyse_history)
 console.log(analyse_to_store)
 
 function sortNumber(a, b) {
-    return b - a;
+    return b.ecoIndex - a.ecoIndex;
   }
   
-  ordre.sort(sortNumber);
+  analyse_to_store.sort(sortNumber); 
+  console.log(analyse_to_store);
 
-/* alert(analyse_to_store.ecoIndex) // renvoie 30 */
+/* /* alert(analyse_to_store.ecoIndex) // renvoie 30 */
 currenturl1.innerHTML =  '<p class="url_style">' + analyse_to_store[0].url + "</p>" ;
 currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[0].ecoIndex + "</p>" ;
 
@@ -129,15 +114,42 @@ currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[1].ecoIndex
 currenturl3.innerHTML =  '<p class="url_style">' + analyse_to_store[2].url + "</p>" ;
 currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[2].ecoIndex + "</p>" ;
 
-
-
-
-
-/* 
-if(currentGrade1 < analyse_to_store[0].ecoIndex){
-
-    currenturl1.innerHTML = '<p class="url_style">' + analyse_to_store.url + "</p>" ;
-    currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store.ecoIndex + "</p>";
 }
 
- */
+trie()
+
+function trieReverse() {
+
+    let currenturl1 = document.querySelector(".line4");
+    let currenturl2 = document.querySelector(".line5");
+    let currenturl3 = document.querySelector(".line6");
+    let currentGrade1 = document.querySelector(".rect4");
+    let currentGrade2 = document.querySelector(".rect5");
+    let currentGrade3 = document.querySelector(".rect6");
+    let analyse_history = localStorage.getItem("analyse_history");
+    let analyse_to_store = JSON.parse(analyse_history);
+    let analyse_to_store_reverse = JSON.parse(analyse_history);
+    
+    console.log(analyse_history)
+    console.log(analyse_to_store)
+    
+    function sortNumber(a, b) {
+        return a.ecoIndex - b.ecoIndex;
+      }
+      
+      analyse_to_store.sort(sortNumber); 
+      console.log(analyse_to_store);
+    
+    /* /* alert(analyse_to_store.ecoIndex) // renvoie 30 */
+    currenturl1.innerHTML =  '<p class="url_style">' + analyse_to_store[3].url + "</p>" ;
+    currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[3].ecoIndex + "</p>" ;
+    
+    currenturl2.innerHTML =  '<p class="url_style">' + analyse_to_store[4].url + "</p>" ;
+    currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[4].ecoIndex + "</p>" ;
+    
+    currenturl3.innerHTML =  '<p class="url_style">' + analyse_to_store[5].url + "</p>" ;
+    currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[5].ecoIndex + "</p>" ;
+    
+    }
+
+trieReverse()
