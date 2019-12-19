@@ -234,6 +234,32 @@ nav ul
     border-radius: 35px;
 }
 
+.line4
+{
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 35px;
+}
+.url_style{
+    word-wrap: break-word;
+}
+.line5
+{
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 35px;
+}
+
+.line6
+{
+    height: 100%;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 35px;
+}
+
 .rect1
 {
     height: 100%;
