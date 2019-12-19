@@ -65,11 +65,11 @@ class Bars {
 
         //this.variable.addEventListener('timeupdate', () => {
           //  const ratio = this.audioElement.currentTime / this.audioElement.duration
-       //     fill1Element.style.transform = `scaleX(${ratio})`
+       //     fill1Element.style.transform = scaleX(${ratio})
         //    bar1Knob.style.left = Math.floor(ratio) + "px"
-        //    fill2Element.style.transform = `scaleX(${ratio})`
+        //    fill2Element.style.transform = scaleX(${ratio})
         //    bar2Knob.style.left = Math.floor(ratio) + "px"
-        //    fill3Element.style.transform = `scaleX(${ratio})`
+        //    fill3Element.style.transform = scaleX(${ratio})
         //    bar3Knob.style.left = Math.floor(ratio) + "px"
         //})
 
