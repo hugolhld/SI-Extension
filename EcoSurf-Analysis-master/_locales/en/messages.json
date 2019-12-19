@@ -68,7 +68,7 @@
     "description": "Launch Analysis"
   },
   "menuText": {
-    "message": "GreenIT Analysis is install in your browser and accessible via the devtool panel (F12) ",
+    "message": "Ecosurf Analysis is install in your browser and accessible via the devtool panel (F12) ",
     "description": "Text when you click on the plugin's icone"
   },
   "menuMoreInformation": {

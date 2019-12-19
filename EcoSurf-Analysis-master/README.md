@@ -1,7 +1,7 @@
-# GreenIT-Analysis 
+# Ecosurf-Analysis 
 
 
-GreenIT-Analysis est une extension pour navigateur qui vous permet de quantifier les impacts environnementaux d'un parcours utilisateur complet, même derrière un firewall et / ou une authentification applicative. L'outil vérifie également l'utilisation de bonnes pratiques visant à diminuer ces impacts.
+Ecosurf-Analysis est une extension pour navigateur qui vous permet de quantifier les impacts environnementaux d'un parcours utilisateur complet, même derrière un firewall et / ou une authentification applicative. L'outil vérifie également l'utilisation de bonnes pratiques visant à diminuer ces impacts.
 
 Cette extension s'inspire fortement des fonctionnalités de [EcoIndex](http://www.ecoindex.fr/) et [EcoMeter](http://www.ecometer.org/).
 
@@ -11,9 +11,9 @@ A noter que bien que fonctionnant sur la version ESR de firefox, le plugin a des
 
 ### Utiliser l'extension
 * Ouvrir les outils de développement du navigateur (F12).   
-* Aller dans l'onglet GreenIT.   
+* Aller dans l'onglet Ecosurf.   
 * Dans le navigateur, aller sur la page à analyser.
-* Dans l'onglet GreenIT des outils de développement, cliquer sur le bouton "Lancer l'analyse".
+* Dans l'onglet Ecosurf des outils de développement, cliquer sur le bouton "Lancer l'analyse".
 * Les résultats s'affichent.
 * Vous pouvez sauvegarder ce résultat dans un historique (seul les indicateurs sont enregistrés) via le bouton "Sauver l'analyse"
 * L'historique des résultats sauvegardés est disponible via le bouton "Historique"
@@ -72,7 +72,7 @@ Pour toutes anomalies ou questions, vous pouvez poster une issue ou contacter di
 
 ## License
 
-GreenIT-Analysis est sous license AGPLv3.
+Ecosurf-Analysis est sous license AGPLv3.
 
     Copyright (C) 2016  The EcoMeter authors (https://gitlab.com/ecoconceptionweb/ecometer)
     Copyright (C) 2019  didierfred@gmail.com 

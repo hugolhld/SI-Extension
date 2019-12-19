@@ -348,6 +348,6 @@ function isSvgOptimized(svgImage) {
 function debug(lazyString) {
   if (!DEBUG) return;
   const message = typeof lazyString === 'function' ? lazyString() : lazyString;
-  console.log(`GreenIT-Analysis [DEBUG] ${message}\n`);
+  console.log(`EcoSurf [DEBUG] ${message}\n`);
 }
 

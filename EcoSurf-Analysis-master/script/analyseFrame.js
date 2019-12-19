@@ -84,8 +84,8 @@ function getInlineStyleSheetsNumber() {
       if (!styleSheet.href) inlineStyleSheetsNumber++;
     }
     catch (err) {
-      console.log("GREENIT-ANALYSIS ERROR ," + err.name + " = " + err.message);
-      console.log("GREENIT-ANALYSIS ERROR " + err.stack);
+      console.log("ECOSURF-ANALYSIS ERROR ," + err.name + " = " + err.message);
+      console.log("ECOSURF-ANALYSIS ERROR " + err.stack);
     }  
   });
 return inlineStyleSheetsNumber;
