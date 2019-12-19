@@ -1,35 +1,27 @@
 html,
 body {
-    height: 100%;
     margin: 0;
-    padding: 0 10px;
-}
-
-
-body {
-    width: 99%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 0;
     background-color: #fff;
     font-family: 'Open Sans';
     font-weight: normal;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
+
+
+/* Menu */
 
 .navBar
 {
     position: fixed;
+    top: 0;
     left: 0;
     width: 100px;
-    height: 100%;
-    text-align: center;
-    font-weight: bold;
+    height: 100vh;
     background-color: rgb(143, 143, 143);
     color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
 }
 
@@ -41,41 +33,60 @@ a
 
 nav ul
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     list-style: none;
-    margin-left: -40px;
-    margin-top: 250%;
+    padding: 0;
 }
-
 
 .menuItem img
 {
-    width: 70px;
-    padding-top: 50px;
+    width: 60px;
+    padding: 10px 0;
+}
+
+/* Consommation CO2 et eau */
+
+main{
+    width: calc(100vw - 100px);
+    height: 100vh;
+    margin-left: 100px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.title
+{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
 }
 
 .leftSide
 {
-    height:74%;
-    width: 25%;
+    height:70vh;
+    width: 30%;
+    border-radius: 35px;    
+}
+
+.aujourd{
     background-color: #C4E566;
-    border-radius: 35px;
-    margin-top: 50px;
-    margin-left: 100px;
+    border-radius: 35px; 
+    display:flex;
     
+}
+
+.co2
+{
+    width: 60%;
+    height: 130px;
+    background-color: #CDECF9;
+    border-radius: 35px;
+    text-align: center;
 }
 
 .rightSide
 {
-    height:80%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 50px;
+    height:70vh;
+    width: 60%;
 }
 
 .top
@@ -139,9 +150,6 @@ nav ul
 .logo
 {
     width: 820px;
-    margin-top: -160px;
-    margin-left: -180px ;
-    padding-bottom: -150px;
 }
 
 .box
@@ -151,8 +159,6 @@ nav ul
     width: 85%;
     background-color: #fff;
     border-radius: 35px;
-    margin-left: 8%;
-    margin-top: 150px;
 }
 
 .tips2
@@ -175,25 +181,12 @@ nav ul
     border-color: #C4E566;
 }
 
-.co2
-{
-    height: 150px;
-    width: 60%;
-    background-color: #CDECF9;
-    border-radius: 35px;
-    margin-left: 20%;
-    margin-top: -360px;
-    text-align: center;
-}
-
 .box2
 {
     height: 200px;
     width: 85%;
     background-color: #fff;
     border-radius: 35px;
-    margin-left: 8%;
-    margin-top: 330px;
 }
 
 .lines1
@@ -274,78 +267,7 @@ nav ul
     border-radius: 35px;
 }
 
-.amount1
-{
-    height: 100%;
-    width: 15%;
-    background-color: #fff;
-    border-radius: 10px;
-}
 
-.amount2
-{
-    height: 100%;
-    width: 15%;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-.amount3
-{
-    height: 100%;
-    width: 15%;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-.bar1
-{
-    height: 60%;
-    width: 70%;
-    background-color: #CDECF9;
-    border-radius: 35px;
-}
-
-.bar2
-{
-    height: 60%;
-    width: 70%;
-    background-color: #CDECF9;
-    border-radius: 35px;
-}
-
-.bar3
-{
-    height: 60%;
-    width: 70%;
-    background-color: #CDECF9;
-    border-radius: 35px;
-}
-
-.title
-{
-    position: absolute;
-    margin-top: -130px;
-    font-size: 25px;
-    font-weight: normal;
-    text-align: center;
-}
-
-.title1
-{
-    margin-top: -70px;
-    margin-left: 7.5%;
-}
-
-.title2
-{
-    margin-top: 130px;
-}
-
-.title3
-{
-    margin-top: -140px;
-}
 
 .co2Text
 {
