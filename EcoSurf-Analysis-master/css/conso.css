@@ -182,7 +182,8 @@ nav ul
     background-color: #CDECF9;
     border-radius: 35px;
     margin-left: 20%;
-    margin-top: -330px;
+    margin-top: -360px;
+    text-align: center;
 }
 
 .box2
@@ -344,4 +345,18 @@ nav ul
 .title3
 {
     margin-top: -140px;
+}
+
+.co2Text
+{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.waterText
+{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 15px;
 }
