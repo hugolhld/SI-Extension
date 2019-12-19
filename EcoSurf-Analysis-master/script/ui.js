@@ -216,7 +216,7 @@ function showEcoRuleOnUI(rule) {
 }
 
 function viewHistory() {
-  if (chrome.tabs) chrome.tabs.query({ currentWindow: true }, loadHistoryTab);
+  if (chrome.tabs) chrome.tabs.query({ currentWindow: false }, loadHistoryTab);
   // chrome.tabs is not accessible in old chromium version
   else window.open("history.html");
 }

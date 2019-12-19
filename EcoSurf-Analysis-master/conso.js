@@ -79,3 +79,77 @@ class Bars {
 }
 
 const bars = new Bars(document.querySelector('.bars'))
+
+
+
+function trie() {
+
+let currenturl1 = document.querySelector(".line1");
+let currenturl2 = document.querySelector(".line2");
+let currenturl3 = document.querySelector(".line3");
+let currentGrade1 = document.querySelector(".rect1");
+let currentGrade2 = document.querySelector(".rect2");
+let currentGrade3 = document.querySelector(".rect3");
+let analyse_history = localStorage.getItem("analyse_history");
+let analyse_to_store = JSON.parse(analyse_history);
+
+
+console.log(analyse_history)
+console.log(analyse_to_store)
+
+function sortNumber(a, b) {
+    return b.ecoIndex - a.ecoIndex;
+  }
+  
+  analyse_to_store.sort(sortNumber); 
+  console.log(analyse_to_store);
+
+/* /* alert(analyse_to_store.ecoIndex) // renvoie 30 */
+currenturl1.innerHTML =  '<p class="url_style">' + analyse_to_store[0].url + "</p>" ;
+currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[0].ecoIndex + "</p>" ;
+
+currenturl2.innerHTML =  '<p class="url_style">' + analyse_to_store[1].url + "</p>" ;
+currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[1].ecoIndex + "</p>" ;
+
+currenturl3.innerHTML =  '<p class="url_style">' + analyse_to_store[2].url + "</p>" ;
+currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[2].ecoIndex + "</p>" ;
+
+}
+
+trie()
+
+function trieReverse() {
+
+    let currenturl1 = document.querySelector(".line4");
+    let currenturl2 = document.querySelector(".line5");
+    let currenturl3 = document.querySelector(".line6");
+    let currentGrade1 = document.querySelector(".rect4");
+    let currentGrade2 = document.querySelector(".rect5");
+    let currentGrade3 = document.querySelector(".rect6");
+    let analyse_history = localStorage.getItem("analyse_history");
+    let analyse_to_store = JSON.parse(analyse_history);
+    let analyse_to_store_reverse = JSON.parse(analyse_history);
+    
+    console.log(analyse_history)
+    console.log(analyse_to_store)
+    
+    function sortNumber(a, b) {
+        return a.ecoIndex - b.ecoIndex;
+      }
+      
+      analyse_to_store.sort(sortNumber); 
+      console.log(analyse_to_store);
+    
+    /* /* alert(analyse_to_store.ecoIndex) // renvoie 30 */
+    currenturl1.innerHTML =  '<p class="url_style">' + analyse_to_store[3].url + "</p>" ;
+    currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[3].ecoIndex + "</p>" ;
+    
+    currenturl2.innerHTML =  '<p class="url_style">' + analyse_to_store[4].url + "</p>" ;
+    currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[4].ecoIndex + "</p>" ;
+    
+    currenturl3.innerHTML =  '<p class="url_style">' + analyse_to_store[5].url + "</p>" ;
+    currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[5].ecoIndex + "</p>" ;
+    
+    }
+
+trieReverse()
