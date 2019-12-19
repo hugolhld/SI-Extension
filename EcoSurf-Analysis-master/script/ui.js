@@ -27,8 +27,8 @@ if (!bar){
     text: {
       autoStyleContainer: false
     },
-    from: { color: "#aaa", width: 1 },
-    to: { color: "#333", width: 4 },
+    from: { color: "#c00", width: 3 },
+    to: { color: "#45D492", width: 6 },
     // Set default step function for all animate calls
     step: function(state, circle) {
       circle.path.setAttribute("stroke", state.color);
@@ -40,6 +40,7 @@ if (!bar){
       } else {
         circle.setText(value);
       }
+
     }
   });
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';

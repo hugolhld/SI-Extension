@@ -1,7 +1,7 @@
 {
-  "description": "GreenIT-Analysis",
+  "description": "EcoSurf",
   "manifest_version": 2,
-  "name": "GreenIT-Analysis",
+  "name": "EcoSurf",
   "version": "2.0",
   "homepage_url": "https://github.com/didierfred/GreenIT-Analysis",
   "icons" : {
@@ -16,7 +16,7 @@
    "devtools_page": "GreenIT-Analysis.html",
    "browser_action": {
     "default_icon": "icons/logo-48.png",
-    "default_title": "GreenIT-Analysis",
+    "default_title": "EcoSurf",
     "default_popup": "menu.html"
   },
   "default_locale": "en"
