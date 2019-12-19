@@ -68,7 +68,7 @@
     "description": "Launch Analysis"
   },
   "menuText": {
-    "message": "GreenIT Analysis est installé et accessible via le panneau développeur (F12) ",
+    "message": "EcoSurf est installé et accessible via le panneau développeur (F12) ",
     "description": "Text when you click on the plugin's icone"
   },
   "menuMoreInformation": {

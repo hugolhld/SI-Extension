@@ -12,9 +12,10 @@ body{
     display: flex;
     justify-content: center;
     height: 15%;
-
 }
-
+.btn-primary{
+  background: #00a9de;
+}
 .btn-design{
 background:#00a9de;
 box-shadow: 0 1px #444444;  
@@ -37,7 +38,7 @@ border-radius: 12px;
 
 .eco_print{
     background-color: #ffffff;
-    height: 300px;
+    height: 380px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -257,5 +258,9 @@ h4{
       opacity: 1;
     }
   }
-  
-  
+  #hugolpb {
+    margin: 20px;
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
