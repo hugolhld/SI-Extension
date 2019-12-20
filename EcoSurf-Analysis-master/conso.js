@@ -78,6 +78,7 @@ class Bars {
 
 }
 
+const bars = new Bars(document.querySelector('.bars'))
 
 
 
@@ -127,6 +128,7 @@ function trieReverse() {
     let currentGrade3 = document.querySelector(".rect6");
     let analyse_history = localStorage.getItem("analyse_history");
     let analyse_to_store = JSON.parse(analyse_history);
+    let analyse_to_store_reverse = JSON.parse(analyse_history);
     
     console.log(analyse_history)
     console.log(analyse_to_store)

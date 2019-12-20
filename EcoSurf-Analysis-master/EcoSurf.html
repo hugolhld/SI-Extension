@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <title> EcoSurf Analysis Panel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylePanel.css">
+  <link rel = "stylesheet" type = "text / css" href = "css/loading-bar.css" />
+
+  <style type="text/css">
+    .grade {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #f00;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+
+    .grade.A {
+      background-color: #349A47;
+      color: #fff;
+    }
+
+    .grade.B {
+      background-color: #51B84B;
+      color: #fff;
+    }
+
+    .grade.C {
+      background-color: #CADB2A
+    }
+
+    .grade.D {
+      background-color: #F6EB15
+    }
+
+    .grade.E {
+      background-color: #FECD06
+    }
+
+    .grade.F {
+      background-color: #F99839;
+      color: #fff;
+    }
+
+    .grade.G {
+      background-color: #ED2124;
+      color: #fff;
+    }
+
+    .bestPracticeDetail {
+      border: 1px solid rgb(8, 226, 73);
+    }
+
+    .bestPracticeDetailComment {
+      border: 1px solid rgb(226, 8, 8);
+    }
+
+    th,
+    td {
+      border: 1px solid white;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 10px;
+      text-align: left;
+    }
+
+    table {
+      border-collapse: collapse;
+      table-layout: fixed;
+      width: 450px;
+    }
+
+    .bestPracticeLink {
+      color: black;
+    }
+
+    .detailCommentLink {
+      color: rgb(3, 3, 3);
+      background-color: #F6EB15;
+
+      background-color: rgb(219, 221, 223);
+      font-size: 10px;
+      line-height: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+  <div class="aide"><a href="#" id="helpButton" class="btn btn-primary btn-sm" data-i18n="helpButton"><img src="#" alt=""></a></div>
+  <div class="logo"><img src="icons/Ecosurf full logo.svg" alt=logo></div>
+  <div class="action_button">
+      <a href="#" id="launchAnalyse" class="btn btn-primary btn-sm btn-design" data-i18n="launchAnalyseButton"></a>
+      <a href="#" id="saveAnalyse" class="btn btn-primary btn-sm btn-design" data-i18n="saveAnalyseButton"></a>
+      <a href="#" id="viewHistory" class="btn btn-primary btn-sm btn-design" data-i18n="historyButton"></a>
+  </div>
+  <div data-i18n="activateBestPracticeAnalysisCheckbox" class="best_practice">
+    <input type="checkbox" class="btn btn-primary btn-sm switch" id="analyseBestPracticesCheckBox"></input>
+  </div>
+  <script type="text/javascript" data-main="script/utils.js" src="script/require.js"> </script>
+      <H4> EcoSurf <span id="grade"></span> </H4>
+  <div id="ecoIndexView" hidden>
+  <div class="eco_print">
+      <div class="title_print"><h3>Empreinte écologique du site</h3></div>
+      <div class="rank"><div id="hugolpb"></div></div>
+      <table class="table table-condensed"></div>
+          <tbody>
+            <tr>
+              <th data-i18n="requestNumber" class="bold_police"> </th>
+              <th data-i18n="pageSize" class="bold_police"> </th>
+              <th data-i18n="domSize" class="bold_police"> </th>
+            </tr>
+            <tr>
+              <td id="requestNumber" class="result_bold_police"></td>
+              <td id="responsesSize" class="result_bold_police"></td>
+              <td id="domSize" class="result_bold_police"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-condensed">
+          <tbody>
+            <tr>
+              <th data-i18n="ecoIndex" class="bold_police"></th>
+              <th data-i18n="waterConsumption" class="bold_police"></th>
+              <th data-i18n="greenhouseGasesEmission" class="bold_police"> </th>
+            </tr>
+            <tr>
+              <td id="ecoIndex"class="result_bold_police"></td>
+              <td id="waterConsumption"class="result_bold_police"></td>
+              <td id="greenhouseGasesEmission"class="result_bold_police"></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
+  <div id="bestPracticesView" hidden>
+    <H4 data-i18n="bestPractices"></H4>
+    <table class="table table-condensed table_practice">
+      <tbody id="bestPracticesTable">
+      </tbody>
+    </table>
+  </div>
+  <script src="script/progressbar.min.js"></script>
+  <script src="script/ui.js"> </script>
+  <script src="script/progress.js"></script>
+  <script src="script/loading-bar.js"> </script>
+  <script src="script/externalLibs/require.js"> </script>
+  <script src="script/utils.js"> </script>
+  <script src="script/rulesManager.js"> </script>
+  <script src="script/rules.js"> </script> 
+  <script src="script/rules/AddExpiresOrCacheControlHeaders.js"></script>
+  <script src="script/rules/CompressHttp.js"></script>
+  <script src="script/rules/DomainsNumber.js"></script>
+  <script src="script/rules/DontResizeImageInBrowser.js"></script>
+  <script src="script/rules/EmptySrcTag.js"></script>
+  <script src="script/rules/ExternalizeCss.js"></script>
+  <script src="script/rules/ExternalizeJs.js"></script>
+  <script src="script/rules/HttpRequests.js"></script>
+  <script src="script/rules/ImageDownloadedNotDisplayed.js"></script>
+  <script src="script/rules/JsValidate.js"></script>
+  <script src="script/rules/MaxCookiesLength.js"></script>
+  <script src="script/rules/MinifiedCss.js"></script>
+  <script src="script/rules/MinifiedJs.js"></script>
+  <script src="script/rules/NoCookieForStaticRessources.js"></script>
+  <script src="script/rules/NoRedirect.js"> </script>
+  <script src="script/rules/OptimizeBitmapImages.js"> </script>
+  <script src="script/rules/OptimizeSvg.js"> </script>
+  <script src="script/rules/Plugins.js"> </script>
+  <script src="script/rules/PrintStyleSheet.js"> </script>
+  <script src="script/rules/StyleSheets.js"> </script>
+  <script src="script/rules/UseETags.js"> </script>
+  <script src="script/rules/UseStandardTypefaces.js"> </script>
+  <script src="script/greenpanel.js"> </script>
+  <script src="script/ecoIndex.js"> </script>
+  <script src="script/i18n.js"> </script>
+</body>
+
+</html>

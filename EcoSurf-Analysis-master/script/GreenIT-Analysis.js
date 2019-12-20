@@ -3,7 +3,7 @@
 
 chrome.devtools.panels.create("EcoSurf",
   "../icons/logo-48.png",
-  "../GreenPanel.html",
+  "../EcoSurf.html",
   (panel) => {
     // code invoked on panel creation
   }

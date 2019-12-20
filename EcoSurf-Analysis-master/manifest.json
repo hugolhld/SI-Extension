@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "EcoSurf",
   "version": "2.0",
-  "homepage_url": "https://github.com/didierfred/GreenIT-Analysis",
+  "homepage_url": "https://github.com/hugolhld/SI-Extension",
   "icons" : {
     "48": "icons/logo-48.png"
   },
@@ -13,7 +13,7 @@
   "background": {
     "scripts": ["background.js"]
   },
-   "devtools_page": "GreenIT-Analysis.html",
+   "devtools_page": "EcoSurf-Analysis.html",
    "browser_action": {
     "default_icon": "icons/logo-48.png",
     "default_title": "EcoSurf",

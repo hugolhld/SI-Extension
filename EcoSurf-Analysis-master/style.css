@@ -118,6 +118,11 @@ button{
     outline: none;
 }
 
+.content-button a{
+  text-decoration: none;
+  color: #fff;
+}
+
 .content-result{
     width: 70%;
     margin: 0 auto;

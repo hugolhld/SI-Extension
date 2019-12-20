@@ -163,6 +163,9 @@ nav ul
     border-style: solid;
     border-width: 4px;
     border-color: #C4E566;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .tips3
@@ -173,6 +176,9 @@ nav ul
     border-style: solid;
     border-width: 4px;
     border-color: #C4E566;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .co2

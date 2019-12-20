@@ -238,7 +238,7 @@ function loadHistoryTab(tabs) {
 
 function viewHelp() {
   window.open(
-    "https://github.com/didierfred/GreenIT-Analysis/blob/V2/README.md"
+    "https://github.com/hugolhld/SI-Extension"
   );
 }
 
