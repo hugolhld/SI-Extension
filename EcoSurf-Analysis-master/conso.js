@@ -45,7 +45,7 @@ function setAmount() {
 setAmount()
 
 
-class Bars {
+/* class Bars {
     constructor(_element) {
         this.element = _element
         this.setBars()
@@ -62,7 +62,7 @@ class Bars {
         const bar3Element = this.element.querySelector('.bar3')
         const fill3Element = bar3Element.querySelector('.bar3Fill')
         const bar3Knob = document.querySelector('.bar3Knob')
-
+ */
         //this.variable.addEventListener('timeupdate', () => {
           //  const ratio = this.audioElement.currentTime / this.audioElement.duration
        //     fill1Element.style.transform = scaleX(${ratio})
@@ -74,12 +74,12 @@ class Bars {
         //})
 
 
-    }
+  /*   }
 
 }
-
-const bars = new Bars(document.querySelector('.bars'))
-
+ */
+/* const bars = new Bars(document.querySelector('.bars'))
+ */
 
 
 function trie() {

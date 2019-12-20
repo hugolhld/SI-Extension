@@ -272,6 +272,7 @@ nav ul
     width: 20%;
     background-color: #fff;
     border-radius: 35px;
+    text-align: center;
 }
 
 .line2
@@ -288,6 +289,7 @@ nav ul
     width: 20%;
     background-color: #fff;
     border-radius: 35px;
+    text-align: center;
 }
 
 .line3
@@ -304,6 +306,7 @@ nav ul
     width: 20%;
     background-color: #fff;
     border-radius: 35px;
+    text-align: center;
 }
 
 .amount1
@@ -392,3 +395,28 @@ nav ul
     text-align: center;
     padding-top: 15px;
 }
+.rect4
+{
+    height: 100%;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 35px;
+    text-align: center;
+}
+.rect5
+{
+    height: 100%;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 35px;
+    text-align: center;
+}
+.rect6
+{
+    height: 100%;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 35px;
+    text-align: center;
+}
+
