@@ -106,14 +106,13 @@ function sortNumber(a, b) {
 
 /* /* alert(analyse_to_store.ecoIndex) // renvoie 30 */
 currenturl1.innerHTML =  '<p class="url_style">' + analyse_to_store[0].url + "</p>" ;
-currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[0].ecoIndex + "</p>" ;
+currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[0].ecoIndex + '/' + 100 + "</p>" ;
 
 currenturl2.innerHTML =  '<p class="url_style">' + analyse_to_store[1].url + "</p>" ;
-currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[1].ecoIndex + "</p>" ;
+currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[1].ecoIndex + '/' + 100 + "</p>"
 
 currenturl3.innerHTML =  '<p class="url_style">' + analyse_to_store[2].url + "</p>" ;
-currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[2].ecoIndex + "</p>" ;
-
+currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[2].ecoIndex + '/' + 100 + "</p>"
 }
 
 trie()
@@ -142,14 +141,13 @@ function trieReverse() {
     
     /* /* alert(analyse_to_store.ecoIndex) // renvoie 30 */
     currenturl1.innerHTML =  '<p class="url_style">' + analyse_to_store[3].url + "</p>" ;
-    currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[3].ecoIndex + "</p>" ;
+    currentGrade1.innerHTML = '<p class="url_style">' + analyse_to_store[3].ecoIndex + '/' + 100 + "</p>"
     
     currenturl2.innerHTML =  '<p class="url_style">' + analyse_to_store[4].url + "</p>" ;
-    currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[4].ecoIndex + "</p>" ;
+    currentGrade2.innerHTML = '<p class="url_style">' + analyse_to_store[4].ecoIndex + '/' + 100 + "</p>"
     
     currenturl3.innerHTML =  '<p class="url_style">' + analyse_to_store[5].url + "</p>" ;
-    currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[5].ecoIndex + "</p>" ;
-    
+    currentGrade3.innerHTML = '<p class="url_style">' + analyse_to_store[5].ecoIndex + '/' + 100 + "</p>"
     }
 
 trieReverse()

@@ -265,6 +265,7 @@ nav ul
 }
 .url_style{
     word-wrap: break-word;
+    margin-left: 5px;
 }
 .line5
 {
@@ -436,3 +437,38 @@ nav ul
     text-align: center;
 }
 
+
+.container-fluid {
+    font-size: 13px;
+}
+
+imput {
+    overflow: hidden;
+    font: normal 17px/1 "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #00a9de;
+    line-height: 29px;
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width: 1070px) {
+    .title2
+{
+    margin-top: 12%;
+}
+
+.title1 {
+    margin-top: -61px;
+    margin-left: 6%;
+    font-size: 19px;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 150%;
+}
+  }
