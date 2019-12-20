@@ -116,13 +116,29 @@ nav ul
 .bars
 {
     height:25%;
-    width: 100%;
+    width: 80%;
     background-color: #C4E566;
     border-radius: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    text-align:center;
+}
+
+.bars div{
+    background: white;
+    padding: 7px 20px;
+    border-radius: 35px;
+}
+
+.bars button{
+    border-radius:10px;
+}
+
+.bars p{
+    border-radius:10px;
+    margin-bottom: 7px;
 }
 
 .tips
