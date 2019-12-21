@@ -134,6 +134,7 @@ button{
 
 .content-result span{
     display: block;
+    overflow: hidden;
 }
 
 .content-weight{

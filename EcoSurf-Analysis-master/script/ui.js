@@ -166,8 +166,7 @@ function refreshUI() {
       measures.responsesSize / 1000
     );
   document.getElementById("domSize").innerHTML = measures.domSize;
-  document.getElementById("ecoIndex").innerHTML =
-    '<p class="gradeCircle">' + measures.ecoIndex + "</p>";
+  document.getElementById("ecoIndex").innerHTML = measures.ecoIndex;
 
   let test = measures.ecoIndex;
   if(bar){

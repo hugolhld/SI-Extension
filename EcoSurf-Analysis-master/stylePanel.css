@@ -38,7 +38,7 @@ border-radius: 12px;
 
 .eco_print{
     background-color: #ffffff;
-    height: 380px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -162,7 +162,7 @@ input[type=checkbox] {
 }
 
 .table-condensed>tbody>tr>.result_bold_police{
-    font: normal 15px/1 "Open Sans", sans-serif;
+    font: normal 18px/1 "Open Sans", sans-serif;
     font-weight: 700;
     color: #00a9de;
 }
@@ -274,5 +274,9 @@ h4{
   .space{
     height: 74px;
     width: 100%;
+  }
+
+  .aide>a>img>#helpButton {
+    vertical-align: center;
   }
   
