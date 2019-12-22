@@ -11,7 +11,7 @@ body
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 30px;
-    background: #C4E566;
+    background-color: #254F6E;
     padding: 30px;
 }
 
@@ -55,6 +55,7 @@ h1
     height: auto;
     margin: 0 5px;
     fill: white;
+    padding-left: 10px;
 }    
 
 .small-icon
