@@ -19,9 +19,7 @@
     "default_title": "EcoSurf",
     "default_popup": "menu.html"
   },
-  "default_locale": "en",
-   "Content-Security-Policy-Report-Only": "default-src https:; report-uri /csp-violation-report-endpoint/"
-
+  "default_locale": "en"
 }
 
 
